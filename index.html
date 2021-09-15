@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="WordOps Dashboard">
     <meta name="author" content="VirtuBox">
-    <title>WordOps Dashboard</title>
+    <title>Web Sever</title>
     <!-- Favicon -->
     <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
     <!-- Fonts -->
@@ -35,6 +35,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous">
     </script>
+    <script src='Chart.min.js'></script>
+    <script type="text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 
 <body>
@@ -47,9 +49,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Brand -->
-            <a class="navbar-brand pt-0" href="">
+            <!-- <a class="navbar-brand pt-0" href="">
                 <img src="assets/img/brand/logo.png" class="navbar-brand-img" alt="WordOps">
-            </a>
+            </a> -->
             <!-- User -->
             <!-- <ul class="nav align-items-center d-md-none">
         <li class="nav-item dropdown">
@@ -127,31 +129,31 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/files/" target="_blank" rel="noopener">
-                            <i class="fas fa-folder-open fa-lg"></i> File Manager
+                            <i class="fas fa-folder-open fa-lg"></i> Management
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/php/info.php" target="_blank" rel="noopener">
-                            <i class="fab fa-php fa-lg"></i> PHP Info
+                            <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/netdata/" target="_blank" rel="noopener">
-                            <i class="fas fa-chart-bar fa-lg"></i> Monitoring
+                            <i class="fas fa-tasks"></i> Policy
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/vts_status" target="_blank" rel="noopener">
-                            <i class="fas fa-list-alt fa-lg"></i> Nginx VTS
+                            <i class="fas fa-tools"></i> Tools
                         </a>
                     </li>
                 </ul>
                 <!-- Divider -->
-                <hr class="my-3">
+                <!-- <hr class="my-3"> -->
                 <!-- Heading -->
-                <h6 class="navbar-heading text-muted">Links</h6>
+                <!-- <h6 class="navbar-heading text-muted">Links</h6> -->
                 <!-- Navigation -->
-                <ul class="navbar-nav mb-md-3">
+                <!-- <ul class="navbar-nav mb-md-3">
                     <li class="nav-item">
 
                     </li>
@@ -190,7 +192,7 @@
                             <i class="fab fa-mastodon fa-lg"></i> Mastodon
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </nav>
@@ -200,8 +202,7 @@
         <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
             <div class="container-fluid">
                 <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="/">WordOps
-                    Dashboard</a>
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="/">WebSever</a>
 
                 <!-- User -->
                 <!-- <ul class="navbar-nav align-items-center d-none d-md-flex">
@@ -255,11 +256,15 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h2 font-weight-bold mb-0">
+                                            <!-- <span class="h2 font-weight-bold mb-0">
                                                 <div data-netdata="system.cpu" data-title="CPU Usage"
                                                     data-chart-library="gauge" data-height="320" data-width="100%"
                                                     data-points="60" data-after="-60"></div>
+                                            </span> -->
+                                            <span>
+                                                <i class="fas fa-exclamation-triangle"></i>
                                             </span>
+                                            <h3>Tổng số máy an toàn</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -270,13 +275,17 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h2 font-weight-bold mb-0">
+                                            <!-- <span class="h2 font-weight-bold mb-0">
                                                 <div class="netdata-container-gauge"
                                                     data-netdata="nginx_local.connections" data-dimensions=""
                                                     data-height="270" data-width="100%" data-chart-library="gauge"
                                                     data-gauge-adjust="width" data-title="Nginx Connections"
                                                     data-before="0" data-after="-480" data-points="CHART_DURATION"
                                                     data-colors="#0099C6" role="application"></div>
+                                            </span> -->
+                                            <span>
+                                                <i class="fas fa-skull-crossbones"></i>
+                                                <h3>Tổng số máy cảnh báo</h3>
                                             </span>
                                         </div>
                                     </div>
@@ -288,20 +297,22 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <span class="h2 font-weight-bold mb-0">
+                                            <!-- <span class="h2 font-weight-bold mb-0">
                                                 <div class="netdata-container-gauge" data-netdata="nginx_local.requests"
                                                     data-dimensions="" data-height="270" data-width="100%"
                                                     data-chart-library="gauge" data-gauge-adjust="width"
                                                     data-title="Nginx Requests" data-before="0" data-after="-480"
                                                     data-points="CHART_DURATION" data-colors="#66AA00"
                                                     role="application" style="will-change: transform;"></div>
-                                            </span>
+                                            </span> -->
+                                            <i class="fas fa-broom"></i>
+                                            <h3>Tổng số máy an toàn</h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl col-lg-6">
+                        <!-- <div class="col-xl col-lg-6">
                             <div class="card card-stats mb-4 mb-xl-0">
                                 <div class="card-body">
                                     <div class="row">
@@ -318,8 +329,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl col-lg-6">
+                        </div> -->
+                        <!-- <div class="col-xl col-lg-6">
                             <div class="card card-stats mb-4 mb-xl-0">
                                 <div class="card-body">
                                     <div class="row">
@@ -336,7 +347,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -349,7 +360,7 @@
                                 href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1"
                                 aria-selected="true">
                                 <i class="fas fa-server fa-lg"></i> Monitoring</a>
-                        </li>
+                        <!-- </li>
                         <li class="nav-item">
                             <a class="nav-link display-4" id="tabs-icons-text-2-tab" data-toggle="tab"
                                 href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2"
@@ -367,7 +378,7 @@
                                 href="#tabs-icons-text-4" role="tab" aria-controls="tabs-icons-text-4"
                                 aria-selected="false">
                                 <i class="fab fa-php fa-lg"></i> PHP</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
@@ -395,9 +406,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-header">
-                                    <div class="row align-items-center">
-                                        <div class="table-responsive">
+                                
+                                
+                                <!-- <div class="card-header"> -->
+                                    <!-- <div class="row align-items-center"> -->
+                                        <!-- <canvas id="buyers" width="600" height="400"></canvas> -->
+                                        <!-- <div class="table-responsive">
                                             <table class="table table-striped table-bordered table-sm">
                                                 <tbody>
                                                     <tr>
@@ -436,9 +450,31 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </div> -->
+                                    <!-- </div> -->
+                                    <!-- <div class="col-sm-6 text-center">
+                                        <label class="label label-success">Line Chart</label>
+                                       <div id="line-chart"></div>
+                                     </div> -->
+                                     
+                                <!-- </div> -->
+                                <div id='chart_line'></div>
+                                <script>
+                                  Morris.Line({
+                                    element: 'chart_line',
+                                    data: [
+                                      { year: '1958', nb: 1 },
+                                      { year: '1962', nb: 2 },
+                                      { year: '1970', nb: 3 },
+                                      { year: '1994', nb: 4 },
+                                      { year: '2002', nb: 5 }
+                                    ],
+                                    xkey: 'year',
+                                    ykeys: ['nb'],
+                                    labels: ['Editions Wins']
+                                  });
+                                </script>
+                                        
                             </div>
                         </div>
                         <div class="col-xl-4">
@@ -470,11 +506,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.cpu&alarm=10min_cpu_usage&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -485,11 +521,11 @@
 
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.load&alarm=load_average_15&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -499,11 +535,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.ram&alarm=ram_in_use&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -513,11 +549,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=mem.available&alarm=ram_available&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -527,11 +563,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=disk_space._&alarm=disk_space_usage&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -541,11 +577,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div>
+                                                        <!-- <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.entropy&alarm=lowest_entropy&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -558,7 +594,7 @@
                 </div>
             </div>
             <!-- Second TAB -->
-            <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+            <!-- <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
                 <div class="container-fluid mt--8">
                     <div class="row">
                         <div class="col mb-5 mb-xl-0">
@@ -628,9 +664,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- tab 3 -->
-            <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+            <!-- <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
                 <div class="container-fluid mt--8">
                     <div class="row">
                         <div class="col mb-5 mb-xl-0">
@@ -697,9 +733,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- tab 4 -->
-            <div class="tab-pane fade" id="tabs-icons-text-4" role="tabpanel" aria-labelledby="tabs-icons-text-4-tab">
+            <!-- <div class="tab-pane fade" id="tabs-icons-text-4" role="tabpanel" aria-labelledby="tabs-icons-text-4-tab">
                 <div class="container-fluid mt--8">
                     <div class="row">
                         <div class="col mb-5 mb-xl-0">
@@ -781,7 +817,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- Footer -->
@@ -826,7 +862,7 @@
     </script>
     <!-- Argon JS -->
     <script src="assets/js/argon.min.js"></script>
-
+    </script>
 </body>
 
 </html>
