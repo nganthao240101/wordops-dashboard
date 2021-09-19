@@ -24,7 +24,7 @@
     <!-- Fonts -->
     <link type="text/css" href="assets/css/gfonts.min.css" rel="stylesheet">
     <!-- Argon CSS -->
-    <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/argon.css" rel="stylesheet">
     <!-- Custon CSS -->
     <link type="text/css" href="assets/css/custom.min.css" rel="stylesheet">
     <script>
@@ -36,7 +36,7 @@
         integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous">
     </script>
     <script type="text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="http://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="http://cdn.jsdelivr.net/npm/chart.js"></script> -->
 </head>
 
 <body>
@@ -128,7 +128,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/files/" target="_blank" rel="noopener">
+                        <a class="nav-link" href="index2.html" target="_blank" rel="noopener">
                             <i class="fas fa-folder-open fa-lg"></i> Management
                         </a>
                     </li>
@@ -359,7 +359,8 @@
                             <a class="nav-link active display-4" id="tabs-icons-text-1-tab" data-toggle="tab"
                                 href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1"
                                 aria-selected="true">
-                                <i class="fas fa-server fa-lg"></i> Monitoring</a>
+                                <!-- <i class="fas fa-server fa-lg"></i>  -->
+                                Monitoring</a>
                         <!-- </li>
                         <li class="nav-item">
                             <a class="nav-link display-4" id="tabs-icons-text-2-tab" data-toggle="tab"
@@ -407,9 +408,48 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="chart">
-                                    <canvas id="mychart"></canvas>
+                                <div class="row computer-list" style="height: 300px;">
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 20px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/PC.jpg" alt="" style="width: 200px;">
+                                            <button class="js-btn">Computer 1</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 15px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/PC.jpg" alt="" style="width: 200px;">
+                                            <button class="js-btn">Computer 2</button>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 13px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/PC.jpg" alt="" style="width: 200px;">
+                                            <button class="js-btn">Computer 3</button>
+
+                                        </div>
+                                    </div>
+                                    
                                 </div>
+                                <!-- <div class="chart">
+                                    <canvas id="mychart"></canvas>
+                                </div> -->
+
                                 
                                 <!-- <div class="card-header"> -->
                                     <!-- <div class="row align-items-center"> -->
@@ -839,6 +879,58 @@
             </div>
         </footer>
     </div>
+    <div class="modal js-modal">
+        <div class="modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="fas fa-window-close"></i>
+            </div>
+            <div class="modal-header">
+                Information
+            </div>
+            <div class="modal-body">
+                <label for="" class="container">Name
+                    <input type="text" class="input-name">
+                </label>
+                <label for="" class="container">Id
+                    <input type="id" class="input-name">
+                </label>
+                <label for="" class="container">Ip
+                    <input type="ip" class="input-name">
+                </label>
+                <label for="" class="container">Path</label>
+                <label for="" class="container">Kilobyte</label>
+                <label for="" class="container">Log_file</label>
+                <label for="" class="container">Remote_host_server</label>
+                <label for="" class="container">Remote_port_server</label>
+                <label for="" class="container">Alert_level</label>
+                <label for="" class="container">Warning_level</label>
+                <label for="" class="container">Notice_level</label>
+
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>"id": "c598dd3d0e4747e4b51b7875d66c52ca"</li>
+                    <li>"mes_type": "ALERT"</li>
+                    <li>"MD5": "41b5ba4bf74e65845fa8c9861ca34508 "</li>
+                    <li>"SHA1": "427934d7fa2467bab1abfa5959c8cf6d0ae00ea7 "</li>
+                    <li>"type": "EXE "</li>
+                    <li>"size": "3723264</li>
+                    <li>"reason": "Malware Hash "</li>
+                    <li>"path": "C:\\Users\\NCKH_2021\\Desktop\\malware-samples-master\\malware-samples-master\\Ransomware\\mssecsvc.bin "</li>
+                    <li>"matches": "Str1: icacls . /grant Everyone:F /T /C /Q Str2: tasksche.exe Str3: Global\\MsWinZonesCacheCounterMutexA Str4: WNcry@2ol7 Str5: www.iuqerfsod ... (truncated)"</li>
+                    <li>"description": "Detects WannaCry Ransomware "</li>
+                    <li>"datetime": "16:01:20:15:09:21"</li>
+                </ul>
+                <div class="buttons">
+                    <button class="clear-modal">Clear</button>
+                    <button class="delete-modal">Delete</button>
+                </div>
+            </div>
+            <div class="modall-footer">
+
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/jquery-3.3.1.slim.min.js">
     </script>
@@ -849,7 +941,7 @@
     <!-- Argon JS -->
     <script src="assets/js/argon.min.js"></script>
     </script>
-    <script>
+    <!-- <script>
         var chart = document.getElementById("mychart");
         console.log(chart);
         var chart = document.getElementById("mychart").getContext('2d');
@@ -874,6 +966,21 @@
             option:{}
         });
 
+    </script> -->
+    <script>
+        const btns=document.querySelectorAll('.js-btn');
+        const modal=document.querySelector('.js-modal');
+        const modalClose=document.querySelector('.js-modal-close')
+        function showCSS(){
+            modal.classList.add('open');
+        }
+        function hideCSS(){
+            modal.classList.remove('open');
+        }
+        for(const btn of btns) {
+            btn.addEventListener('click',showCSS)
+        }
+        modalClose.addEventListener('click',hideCSS);
     </script>
 </body>
 

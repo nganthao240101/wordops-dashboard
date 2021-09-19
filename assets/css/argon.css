@@ -5892,14 +5892,14 @@ button.close {
 
 .modal {
     position: fixed;
-    z-index: 1050;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    display: none;
-    overflow: hidden;
-    outline: 0
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .modal-dialog {
@@ -16991,4 +16991,44 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .input-slider-value-output.right:after {
     right: 10px;
     left: auto
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+.modal-container {
+    overflow-x: scroll;
+    width: 700px;
+    background: deepskyblue;
+    height: 500px;
+    position: relative;
+}
+.modal-header {
+    height: 50px;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    justify-content:center
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top:0;
+    padding-right:8px;
+}
+.modal.open {
+    display: flex;
 }

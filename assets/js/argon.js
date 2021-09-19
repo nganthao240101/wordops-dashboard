@@ -373,6 +373,4 @@ var Tooltip = (function() {
 	}
 
 })();
-#chart_line {
-	
-}
+
