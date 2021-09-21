@@ -17015,6 +17015,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     background: deepskyblue;
     height: 500px;
     position: relative;
+    border-radius:5px
 }
 .modal-header {
     height: 50px;
@@ -17031,4 +17032,49 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .modal.open {
     display: flex;
+}
+.row.computer-list {
+    height: 500px;
+    width: 1000px;
+    overflow-y: scroll;
+}
+.flex-container {
+    width:1000px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin-left: 25px
+}
+.box {
+    width: 150px;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+img.computer-name {
+    width: 110px;
+    height: 90px;
+    padding-left: 20px;
+}
+button.computer-name-btn {
+    border-left-width: 2px;
+    margin-left: 12px;
+    margin-right: 6px;
+    width: 106px;
+    height: 26px;
+    border-radius: 5px;
+    background-color: orange;
+}
+img.icons {
+    width: 50px;
+    height: 50px;
+    display: block;
+     margin-left: auto;
+    margin-right: auto;
+}
+h3 {
+    text-align: center;
 }

@@ -128,23 +128,23 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/files/" target="_blank" rel="noopener">
+                        <a class="nav-link list-group-item-action active" aria-selected="true" href="/files/" target="_blank" rel="noopener">
                             <i class="fas fa-folder-open fa-lg"></i> Management
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/php/info.php" target="_blank" rel="noopener">
+                        <a class="nav-link list-group-item-action active" aria-selected="true" href="/php/info.php" target="_blank" rel="noopener">
                             <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/netdata/" target="_blank" rel="noopener">
+                        <a class="nav-link list-group-item-action active" aria-selected="true" href="/netdata/" target="_blank" rel="noopener">
                             <i class="fas fa-tasks"></i> Policy
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/vts_status" target="_blank" rel="noopener">
-                            <i class="fas fa-tools"></i> Tools
+                        <a class="nav-link list-group-item-action active" aria-selected="true" href="/vts_status" target="_blank" rel="noopener">
+                            <i class="fas fa-tools"></i> Update
                         </a>
                     </li>
                 </ul>
@@ -256,15 +256,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <!-- <span class="h2 font-weight-bold mb-0">
-                                                <div data-netdata="system.cpu" data-title="CPU Usage"
-                                                    data-chart-library="gauge" data-height="320" data-width="100%"
-                                                    data-points="60" data-after="-60"></div>
-                                            </span> -->
                                             <span>
-                                                <i class="fas fa-exclamation-triangle"></i>
+                                                <img src="/assets/img//PCs/clean.png" alt="" class="icons">
                                             </span>
-                                            <h3>Tổng số máy an toàn</h3>
+                                            <h3>Số máy an toàn</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -275,18 +270,11 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <!-- <span class="h2 font-weight-bold mb-0">
-                                                <div class="netdata-container-gauge"
-                                                    data-netdata="nginx_local.connections" data-dimensions=""
-                                                    data-height="270" data-width="100%" data-chart-library="gauge"
-                                                    data-gauge-adjust="width" data-title="Nginx Connections"
-                                                    data-before="0" data-after="-480" data-points="CHART_DURATION"
-                                                    data-colors="#0099C6" role="application"></div>
-                                            </span> -->
                                             <span>
-                                                <i class="fas fa-skull-crossbones"></i>
-                                                <h3>Tổng số máy cảnh báo</h3>
+                                                <img src="/assets/img/PCs/warning.png" alt="" class="icons">
+                                                
                                             </span>
+                                            <h3>Số máy cảnh báo</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -297,16 +285,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <!-- <span class="h2 font-weight-bold mb-0">
-                                                <div class="netdata-container-gauge" data-netdata="nginx_local.requests"
-                                                    data-dimensions="" data-height="270" data-width="100%"
-                                                    data-chart-library="gauge" data-gauge-adjust="width"
-                                                    data-title="Nginx Requests" data-before="0" data-after="-480"
-                                                    data-points="CHART_DURATION" data-colors="#66AA00"
-                                                    role="application" style="will-change: transform;"></div>
-                                            </span> -->
-                                            <i class="fas fa-broom"></i>
-                                            <h3>Tổng số máy an toàn</h3>
+                                            <span>
+                                                <img src="/assets/img/PCs/alert.png" alt="" class="icons">
+                                            </span>
+                                            <h3>Số máy nguy hiểm</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -392,9 +374,14 @@
             <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel"
                 aria-labelledby="tabs-icons-text-1-ta">
                 <div class="container-fluid mt--8">
-                    <div class="row">
+                    <div class="row" style="
+                    height: 500px;
+                ">
                         <div class="col-xl-8 mb-5 mb-xl-0">
-                            <div class="card">
+                            <div class="card" style="
+                            width: 1022px;
+                            height: 500px;
+                        ">
                                 
                                 <div class="card-header shadow border-0">
                                     <div class="row align-items-center">
@@ -407,8 +394,81 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row computer-list" style="height: 300px;">
-                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 20px;">
+                                <!-- Danh sach cac may -->
+                                <div class="row computer-list">
+                                    <div class="flex-container">
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/alert.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/error.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/warning.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/warning.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/error.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/warning.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/alert.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/alert.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/error.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/error.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/clean.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                        <div class="box">
+                                            <img src="assets/img/PCs/alert.jpg" alt="" class="computer-name">
+                                            <button class="computer-name-btn js-btn">Computer 1</button>
+                                        </div>
+                                      </div>
+                                 
+
+                                    <!-- <div class="col-third" style="width: 33.33%; float:height left;padding-left: 20px;">
                                         <div class="computer-body" style="
                                         height: 220px;
                                         text-align: center;
@@ -443,6 +503,41 @@
 
                                         </div>
                                     </div>
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 20px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/clean.png" alt="" style="width: 200px;">
+                                            <button class="js-btn">Clean</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 15px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/warning.png" alt="" style="width: 200px;">
+                                            <button class="js-btn">Warning</button>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-third" style="width: 33.33%; float:height left;padding-left: 13px;">
+                                        <div class="computer-body" style="
+                                        height: 220px;
+                                        text-align: center;
+                                        width: 200px;
+                                        padding-top: 20px;
+                                    ">
+                                            <img src="/assets/img/PCs/alert.png" alt="" style="width: 200px;">
+                                            <button class="js-btn">Alert</button>
+
+                                        </div>
+                                    </div> -->
                                     
                                 </div>
                                 <!-- <div class="chart">
@@ -502,7 +597,7 @@
                                 <!-- </div> -->                              
                             </div>
                         </div>
-                        <div class="col-xl-4">
+                        <!-- <div class="col-xl-4">
                             <div class="card shadow">
                                 <div class="card-header shadow border-0">
                                     <div class="row align-items-center">
@@ -516,7 +611,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <!-- Projects table -->
+                                    Projects table
                                     <table class="table align-items-center table-flush">
                                         <thead class="thead-light">
                                             <tr>
@@ -531,11 +626,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                         <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.cpu&alarm=10min_cpu_usage&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -546,11 +641,11 @@
 
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                         <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.load&alarm=load_average_15&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -560,11 +655,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                         <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.ram&alarm=ram_in_use&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -574,11 +669,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                         <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=mem.available&alarm=ram_available&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -588,11 +683,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                        <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=disk_space._&alarm=disk_space_usage&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -602,11 +697,11 @@
                                                 </th>
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <!-- <div>
+                                                         <div>
                                                             <embed
                                                                 src="/netdata/api/v1/badge.svg?chart=system.entropy&alarm=lowest_entropy&refresh=auto"
                                                                 type="image/svg+xml" height="20" />
-                                                        </div> -->
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -614,11 +709,11 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <!-- Second TAB -->
+        <!-- --Second TAB -->
             <!-- <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
                 <div class="container-fluid mt--8">
                     <div class="row">
